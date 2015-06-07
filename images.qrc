@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/images/toolbar">
+        <file alias="new.png">images/toolbar/new.png</file>
+        <file alias="open.png">images/toolbar/open.png</file>
+        <file alias="save.png">images/toolbar/save.png</file>
+        <file alias="saveall.png">images/toolbar/saveall.png</file>
+    </qresource>
+    <qresource prefix="/images/project">
+        <file alias="close.png">images/project/close.png</file>
+    </qresource>
+</RCC>

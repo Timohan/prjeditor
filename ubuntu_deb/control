@@ -1,0 +1,12 @@
+Package: prj-editor
+Version: 0.1-1
+Section: Editors
+Priority: optional
+Architecture: amd64
+Depends: libqt5gui5, libqt5xml5, libqt5widgets5, libqt5core5a
+Source: prj-editor
+Installed-Size: 441
+Maintainer: Timo Hannukkala <timohannukkala@hotmail.com>
+Description: Prj-Editor
+ This is simple project handling editor
+

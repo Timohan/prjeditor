@@ -1,0 +1,26 @@
+Prj-Editor is simple project based editor.
+
+On UI:
+Top-left view can add/choose project.
+-> Project is actually just folder.
+
+Bottom-left have treeview of folders that let user choose open files.
+
+Right side have editor view.
+-> Right side shows open only those files that are open under current project
+folder (and it's subfolders).
+---
+Some useful stuff:
+-
+Requires: Qt 5.3 or later 
+-
+compile and launch:
+qmake
+make
+sudo make install
+prjeditor
+-
+If you have a ssh filesystem connection and you want Prj-Editor to see and
+edit those files, use "-o allow_other" flag:
+sshfs -p <port> <user>@<ip.address>:/home/user/myfiles /home/me_user/to/myfiles -o allow_other
+

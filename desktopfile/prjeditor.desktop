@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Prj-Editor
+Comment=Project editor
+Exec=prjeditor
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Icon=prjeditor.png
+Categories=Editor;Application;
+

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<highlights>
+    <highlight name="plain text">
+    </highlight>
+
+    <highlight name="c++">
+        <extension>.cpp</extension>
+        <extension>.c</extension>
+        <extension>.cc</extension>
+        <extension>.h</extension>
+        <rule type="RuleWordsBetween" colorR="0" colorG="100" colorB="0">
+            <word>/*</word>
+            <word>*/</word>
+        </rule>
+        <rule type="RuleRegExp" colorR="170" colorG="170" colorB="40">
+            <word>#include *&lt;.*&gt;</word>
+            <word>#include *[\"].*[\"]</word>
+            <word>#define *[a-zA-Z0-9{}()_\-]* *[\"].*[\"]</word>
+            <word>#define *[a-zA-Z0-9{}()_\-]* *[a-zA-Z0-9{}()_\-]*</word>
+            <word>#define *[a-zA-Z0-9{}()_\-]* *[\"].*[\"]</word>
+            <word>#ifndef *[a-zA-Z0-9{}()_\-]*</word>
+            <word>#ifdef *[a-zA-Z0-9{}()_\-]*</word>
+            <word>#endif</word>
+            <word>#else</word>
+            <word>#if</word>
+        </rule>
+        <rule type="RuleRegExp" colorR="0" colorG="100" colorB="0">
+            <word>//[^\n]*</word>
+        </rule>
+        <rule type="RuleWordsBetween" colorR="0" colorG="100" colorB="0">
+            <word>"</word>
+            <word>"</word>
+            <ignoredword>\"</ignoredword>
+        </rule>
+        <rule type="RuleSimpleWord" colorR="0" colorG="0" colorB="255">
+            <word>auto</word>
+            <word>break</word>
+            <word>bool</word>
+            <word>case</word>
+            <word>catch</word>
+            <word>char</word>
+            <word>class</word>
+            <word>const</word>
+            <word>continue</word>
+            <word>default</word>
+            <word>delete</word>
+            <word>do</word>
+            <word>double</word>
+            <word>else</word>
+            <word>enum</word>
+            <word>explicit</word>
+            <word>extern</word>
+            <word>false</word>
+            <word>float</word>
+            <word>for</word>
+            <word>friend</word>
+            <word>goto</word>
+            <word>if</word>
+            <word>inline</word>
+            <word>int</word>
+            <word>long</word>
+            <word>namespace</word>
+            <word>new</word>
+            <word>NULL</word>
+            <word>operator</word>
+            <word>private</word>
+            <word>protected</word>
+            <word>public</word>
+            <word>register</word>
+            <word>return</word>
+            <word>short</word>
+            <word>signed</word>
+            <word>static</word>
+            <word>sizeof</word>
+            <word>struct</word>
+            <word>switch</word>
+            <word>template</word>
+            <word>typedef</word>
+            <word>true</word>
+            <word>try</word>
+            <word>union</word>
+            <word>unsigned</word>
+            <word>virtual</word>
+            <word>void</word>
+            <word>volatile</word>
+            <word>while</word>
+        </rule>
+        <rule type="RuleEnlightOnCursor" colorR="200" colorG="100" colorB="0">
+            <word>{</word>
+            <word>}</word>
+            <word>(</word>
+            <word>)</word>
+            <word>[</word>
+            <word>]</word>
+        </rule>
+    </highlight>
+</highlights>

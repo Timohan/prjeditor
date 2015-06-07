@@ -1,0 +1,64 @@
+Highlights are in xml format (check highlights.xml), file can be modified
+here is simple documentation:
+
+<highlight name="c++">  <- c++ highlights
+....
+default filename's extensions for c++ highlights
+<extension>.cpp</extension>
+....
+
+All text between two words for certain color, multiple lines included:
+<rule type="RuleWordsBetween" colorR="0" colorG="100" colorB="0">
+    <word>/*</word>
+    <word>*/</word>
+</rule>
+-> In this example, all text between 
+/*   
+are RGB(0,100,0)
+*/ 
+....
+One simple text, based by regexp highlight:
+
+<rule type="RuleRegExp" colorR="170" colorG="170" colorB="40">
+    <word>#define *[a-zA-Z0-9{}()_\-]* *[\"].*[\"]</word>
+</rule>
+-> every text that is "#define *[a-zA-Z0-9{}()_\-]* *[\"].*[\"]" will be 
+RGB(170,170,40)
+....
+All text between two words in single line:
+
+<rule type="RuleWordsBetween" colorR="0" colorG="100" colorB="0">
+    <word>"</word>
+    <word>"</word>
+    <ignoredword>\"</ignoredword>
+</rule>
+
+Every text between " " is highlighted RGB(0,100,0), all \" are ignored
+....
+<rule type="RuleSimpleWord" colorR="0" colorG="0" colorB="255">
+    <word>auto</word>
+    <word>break</word>
+</rule>
+every simple word have RGB(0,0,255)
+....
+Cursor highlight:
+<rule type="RuleEnlightOnCursor" colorR="200" colorG="100" colorB="0">
+    <word>{</word>
+    <word>}</word>
+    <word>(</word>
+    <word>)</word>
+</rule>
+If the cursor is behind { -> next pair } will be highlighted 
+If the cursor is after } -> previous pair { will be highlighted 
+If the cursor is behind ( -> next pair ) will be highlighted 
+If the cursor is after ) -> previous pair ( will be highlighted 
+=======================
+highlights .xml file must be in the filepath:
+/usr/share/prj-editor/highlights.xml
+
+-> If you want to change that filepath, 
+it in the prj-editor.pro file
+
+After changing the highlights, re-start the prjeditor.
+
+
