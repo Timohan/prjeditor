@@ -1,7 +1,6 @@
 #include <QResizeEvent>
 #include "cdialogfind.h"
 #include "cmainwindow.h"
-#include "ui_cmainwindow.h"
 #include "ctoolbarwidget.h"
 #include "cprojectlistwidget.h"
 #include "cfoldertreeview.h"
