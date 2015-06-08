@@ -22,7 +22,9 @@
             <word>#ifdef *[a-zA-Z0-9{}()_\-]*</word>
             <word>#endif</word>
             <word>#else</word>
+            <word>#if defined</word>
             <word>#if</word>
+            <word>#undef</word>
         </rule>
         <rule type="RuleRegExp" colorR="0" colorG="100" colorB="0">
             <word>//[^\n]*</word>
