@@ -91,12 +91,16 @@ bool CTextEditStyleList::loadHighlights() {
     QFile fileXml( HIGHLIGHT_FILEPATH );
     if (!fileXml.open(QIODevice::ReadOnly | QIODevice::Text)) {
 
-        // no highlights - add one default highlight
-        if (m_listTextStyle.size() == 0) {
+        fileXml.setFileName("xml/highlights.xml");
+        if (!fileXml.open(QIODevice::ReadOnly | QIODevice::Text)) {
 
-            addTextStyleName(STRING_PLAIN_TEXT);
+            // no highlights - add one default highlight
+            if (m_listTextStyle.size() == 0) {
+
+                addTextStyleName(STRING_PLAIN_TEXT);
+            }
+            return false;
         }
-        return false;
     }
 
     QDomDocument mDocument;
