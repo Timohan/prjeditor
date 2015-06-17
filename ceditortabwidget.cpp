@@ -347,6 +347,20 @@ void CEditorTabWidget::resizeEvent(QResizeEvent *e)
 
 }
 
+void CEditorTabWidget::redo() {
+
+
+    CEditorWidget *pEditorWidget = NULL;
+
+    int iIndex = m_pStackedEditorWidgets->currentIndex();
+
+    if (iIndex >= 0 && iIndex < m_pStackedEditorWidgets->count())
+    {
+        pEditorWidget = (CEditorWidget *)m_pStackedEditorWidgets->widget(iIndex);
+        pEditorWidget->redo();
+    }
+}
+
 void CEditorTabWidget::save()
 {
     CEditorWidget *pEditorWidget = NULL;

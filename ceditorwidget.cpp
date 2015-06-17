@@ -73,6 +73,15 @@ QString CEditorWidget::getFileName()
     return m_strFileName;
 }
 
+void CEditorWidget::redo() {
+
+    if (m_pTextEdit)
+    {
+        m_pTextEdit->redo();
+    }
+}
+
+
 bool CEditorWidget::isTextSameAsSaved()
 {
     if (m_pTextEdit->getLastSavedText() == m_pTextEdit->toPlainText())

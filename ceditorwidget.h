@@ -33,6 +33,8 @@ public:
 
     QString getSelectedText() const;
 
+    void redo();
+
 signals:
     
 public slots:

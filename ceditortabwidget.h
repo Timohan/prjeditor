@@ -61,6 +61,7 @@ public slots:
     void tabBarCurrentChanged(int index);
     void onOpenFile(QString strFileName);
 
+    void redo();
     void save();
     void saveAs();
     void saveAll();

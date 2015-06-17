@@ -102,6 +102,8 @@ CMainWindow::CMainWindow(QWidget *parent) :
     connect(actionReplace, SIGNAL(triggered()), this, SLOT(onOpenDialogReplace()));
     connect(runProject, SIGNAL(triggered()), this, SLOT(onRunProject()));
 
+    connect(actionRedo, SIGNAL(triggered()), m_pEditorTabWidget, SLOT(redo()));
+
     actionNewFile->setShortcut( QKeySequence(SHORTCUT_KEY_NEW) );
     actionOpenFile->setShortcut( QKeySequence(SHORTCUT_KEY_OPEN) );
 
