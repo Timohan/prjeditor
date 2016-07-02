@@ -152,11 +152,14 @@ void CFindFromFilesTreeView::currentChanged(const QModelIndex &current, const QM
 
     QTreeView::currentChanged(current, previous);
 
-    m_pMainWindow->getFolderTreeView()->setToPath(strFileName);
-    m_pMainWindow->getFolderTreeView()->openFile(strFileName);
+    if (m_pMainWindow->getFolderTreeView()) {
 
-    m_pMainWindow->getEditorTabWidget()->setCursorPosition(strFileLine.toInt()-1, m_strSearchText);
-    // This is a fix in case path of files treeview is switch to folder (by folder project change)
-    m_pMainWindow->getFolderTreeView()->setToPath(strFileName);
-    m_pMainWindow->getFolderTreeView()->openFile(strFileName);
+        m_pMainWindow->getFolderTreeView()->setToPath(strFileName);
+        emit m_pMainWindow->getFolderTreeView()->openFile(strFileName);
+
+        m_pMainWindow->getEditorTabWidget()->setCursorPosition(strFileLine.toInt()-1, m_strSearchText);
+        // This is a fix in case path of files treeview is switch to folder (by folder project change)
+        m_pMainWindow->getFolderTreeView()->setToPath(strFileName);
+        m_pMainWindow->getFolderTreeView()->openFile(strFileName);
+    }
 }
