@@ -14,11 +14,11 @@
 CToolbarWidget::CToolbarWidget(CMainWindow *parent) :
     QWidget(parent),
     m_bAllowCurrentIndexChange(true),
-    m_buttonNew(NULL),
-    m_buttonOpen(NULL),
-    m_buttonSave(NULL),
-    m_buttonSaveAll(NULL),
-    m_comboboxTextStyle(NULL),
+    m_buttonNew(nullptr),
+    m_buttonOpen(nullptr),
+    m_buttonSave(nullptr),
+    m_buttonSaveAll(nullptr),
+    m_comboboxTextStyle(nullptr),
     m_pMainWindow(parent)
 {
     m_buttonNew = new CButton(this, STRING_TOOLBAR_NEW, "toolbar/new.png");
@@ -82,32 +82,32 @@ CToolbarWidget::~CToolbarWidget()
     if (m_buttonNew)
     {
         delete m_buttonNew;
-        m_buttonNew = NULL;
+        m_buttonNew = nullptr;
     }
     if (m_buttonOpen)
     {
         delete m_buttonOpen;
-        m_buttonOpen = NULL;
+        m_buttonOpen = nullptr;
     }
     if (m_buttonSave)
     {
         delete m_buttonSave;
-        m_buttonSave = NULL;
+        m_buttonSave = nullptr;
     }
     if (m_buttonSaveAll)
     {
         delete m_buttonSaveAll;
-        m_buttonSaveAll = NULL;
+        m_buttonSaveAll = nullptr;
     }
     if (m_comboboxTextStyle)
     {
         delete m_comboboxTextStyle;
-        m_comboboxTextStyle = NULL;
+        m_comboboxTextStyle = nullptr;
     }
     if (m_comboboxTabulator) {
 
         delete m_comboboxTabulator;
-        m_comboboxTabulator = NULL;
+        m_comboboxTabulator = nullptr;
     }
 }
 
@@ -123,9 +123,9 @@ void CToolbarWidget::setTabulatorIndex(int iIndex) {
 
 void CToolbarWidget::textTabulatorIndexChanged(int iIndex) {
 
-    if (m_pMainWindow != NULL &&
-       m_pMainWindow->getProjectListWidget() != NULL &&
-       m_pMainWindow->getProjectListWidget()->getSelectedItem() != NULL &&
+    if (m_pMainWindow  &&
+       m_pMainWindow->getProjectListWidget() &&
+       m_pMainWindow->getProjectListWidget()->getSelectedItem() &&
        m_pMainWindow->getProjectListWidget()->getSelectedItem()->getTabulatorIndex() != iIndex) {
 
         m_pMainWindow->getProjectListWidget()->getSelectedItem()->setTabulatorIndex(iIndex);
@@ -165,7 +165,7 @@ void CToolbarWidget::resizeEvent(QResizeEvent *e)
 
 void CToolbarWidget::textStyleCurrentIndexChanged(int)
 {
-    if (m_bAllowCurrentIndexChange == true && m_pMainWindow->getTextEditStyleList() != NULL)
+    if (m_bAllowCurrentIndexChange == true && m_pMainWindow->getTextEditStyleList())
     {
         CTextEditStyle *style = m_pMainWindow->getTextEditStyleList()->getTextEditStyle( m_comboboxTextStyle->currentText() );
         m_pMainWindow->getEditorTabWidget()->setTextEditStyle(style);

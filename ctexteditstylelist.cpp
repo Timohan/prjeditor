@@ -23,7 +23,7 @@ CTextEditStyleList::~CTextEditStyleList()
     for (i=0;i<m_listTextStyle.size();i++)
     {
         delete m_listTextStyle[i];
-        m_listTextStyle[i] = NULL;
+        m_listTextStyle[i] = nullptr;
     }
 
     m_listTextStyle.clear();
@@ -66,7 +66,7 @@ CTextEditStyle *CTextEditStyleList::getTextEditStyleByFileExtension(QString strF
         }
     }
 
-    return NULL;
+    return nullptr;
 }
 
 
@@ -83,7 +83,7 @@ CTextEditStyle *CTextEditStyleList::getTextEditStyle(QString strStyleName)
         }
     }
 
-    return NULL;
+    return nullptr;
 }
 
 bool CTextEditStyleList::loadHighlights() {
@@ -186,13 +186,13 @@ bool CTextEditStyleList::loadHighlights() {
 
                                 if (listIgnoredWord.size() == 0) {
 
-                                    CTextEditHighlightRule *pRule = new CTextEditHighlightRule(NULL);
+                                    CTextEditHighlightRule *pRule = new CTextEditHighlightRule(nullptr);
                                     pRule->setRuleWordsBetween(listWord.at(0), listWord.at(1), QColor(r, g, b));
                                     pStyle->addTextEditHighlightRule(pRule);
                                 }
                                 else {
 
-                                    CTextEditHighlightRule *pRule = new CTextEditHighlightRule(NULL);
+                                    CTextEditHighlightRule *pRule = new CTextEditHighlightRule(nullptr);
                                     pRule->setRuleWordsBetween(listWord.at(0), listWord.at(1), QColor(r, g, b), true, listIgnoredWord, listIgnoredWord);
                                     pStyle->addTextEditHighlightRule(pRule);
                                 }
@@ -201,7 +201,7 @@ bool CTextEditStyleList::loadHighlights() {
                             else if (pExtensionOrRuleElement.attribute("type") == "RuleRegExp") {
 
                                 for (i=0;i<listWord.size();i++) {
-                                    CTextEditHighlightRule *pRule = new CTextEditHighlightRule(NULL);
+                                    CTextEditHighlightRule *pRule = new CTextEditHighlightRule(nullptr);
                                     QStringList l;
                                     l << listWord.at(i);
                                     pRule->setRuleRegExp(l, QColor(r, g, b));
@@ -210,13 +210,13 @@ bool CTextEditStyleList::loadHighlights() {
                             }
                             else if (pExtensionOrRuleElement.attribute("type") == "RuleSimpleWord") {
 
-                                CTextEditHighlightRule *pRule = new CTextEditHighlightRule(NULL);
+                                CTextEditHighlightRule *pRule = new CTextEditHighlightRule(nullptr);
                                 pRule->setRuleWord(listWord, QColor(r, g, b));
                                 pStyle->addTextEditHighlightRule(pRule);
                             }
                             else if (pExtensionOrRuleElement.attribute("type") == "RuleEnlightOnCursor") {
 
-                                CTextEditHighlightRule *pRule = new CTextEditHighlightRule(NULL);
+                                CTextEditHighlightRule *pRule = new CTextEditHighlightRule(nullptr);
                                 pRule->setRuleEnlightOnCursor(listWord, QColor(r, g, b));
                                 pStyle->addTextEditHighlightRule(pRule);
                             }

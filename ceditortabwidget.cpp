@@ -23,8 +23,8 @@
 CEditorTabWidget::CEditorTabWidget(CMainWindow *parent) :
     QWidget(parent),
     m_bSideBarPositionDone(false),
-    m_pEditorTabBar(NULL),
-    m_pStackedEditorWidgets(NULL),
+    m_pEditorTabBar(nullptr),
+    m_pStackedEditorWidgets(nullptr),
     m_pMainWindow(parent)
 {
     m_buttonCloseFindFromFiles = new CButton(this, STRING_PROJECT_CLOSE, "project/close.png");
@@ -47,26 +47,26 @@ CEditorTabWidget::~CEditorTabWidget()
     if (m_buttonCloseFindFromFiles)
     {
         delete m_buttonCloseFindFromFiles;
-        m_buttonCloseFindFromFiles = NULL;
+        m_buttonCloseFindFromFiles = nullptr;
     }
 
     if (m_pEditorTabBar)
     {
         delete m_pEditorTabBar;
-        m_pEditorTabBar = NULL;
+        m_pEditorTabBar = nullptr;
     }
 
     if (m_pStackedEditorWidgets)
     {
         delete m_pStackedEditorWidgets;
-        m_pStackedEditorWidgets = NULL;
+        m_pStackedEditorWidgets = nullptr;
     }
 }
 
 void CEditorTabWidget::onFileRename(QString strFrom, QString strTo)
 {
     int i, i2;
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
     strFrom = QDir::toNativeSeparators(strFrom);
     strTo = QDir::toNativeSeparators(strTo);
 
@@ -105,7 +105,7 @@ void CEditorTabWidget::tabBarCurrentChanged(int index)
     int i;
 
     CEditorTabBarLabelWidget *pWidget = (CEditorTabBarLabelWidget *)m_pEditorTabBar->tabButton(index, QTabBar::LeftSide);
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
 
     for (i=0;i<m_pStackedEditorWidgets->count();i++)
     {
@@ -300,7 +300,7 @@ void CEditorTabWidget::setWidgetsForFolder(QString strFolderPath, int iTabOpenIn
 
 void CEditorTabWidget::setTextEditStyle(CTextEditStyle *style)
 {
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
 
     int iIndex = m_pStackedEditorWidgets->currentIndex();
 
@@ -350,7 +350,7 @@ void CEditorTabWidget::resizeEvent(QResizeEvent *e)
 void CEditorTabWidget::redo() {
 
 
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
 
     int iIndex = m_pStackedEditorWidgets->currentIndex();
 
@@ -363,7 +363,7 @@ void CEditorTabWidget::redo() {
 
 void CEditorTabWidget::save()
 {
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
 
     int iIndex = m_pStackedEditorWidgets->currentIndex();
 
@@ -379,7 +379,7 @@ void CEditorTabWidget::save()
 
 void CEditorTabWidget::saveAs()
 {
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
 
     int iIndex = m_pStackedEditorWidgets->currentIndex();
 
@@ -396,7 +396,7 @@ void CEditorTabWidget::saveAs()
 void CEditorTabWidget::setEditorWidgetTabColor(qint64 iId)
 {
     int i;
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
 
     for (i=0;i<m_pStackedEditorWidgets->count();i++)
     {
@@ -422,7 +422,7 @@ void CEditorTabWidget::saveAll()
 {
     int i;
     bool bOneSaveFailed = false;
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
 
     for (i=0;i<m_listEditorWidget.size() && bOneSaveFailed == false;i++)
     {
@@ -608,7 +608,7 @@ void CEditorTabWidget::searchFromFiles()
             m_pSideBarUpDown->setPositionY( this->height() - 200 );
             m_bSideBarPositionDone = true;
         }
-        resizeEvent(NULL);
+        resizeEvent(nullptr);
     }
 }
 
@@ -618,7 +618,7 @@ void CEditorTabWidget::onCloseFindFromFilesClicked()
     m_pFindFromFilesTreeView->setVisible(false);
     m_buttonCloseFindFromFiles->setVisible(false);
 
-    resizeEvent(NULL);
+    resizeEvent(nullptr);
 }
 
 void CEditorTabWidget::replace()
@@ -669,8 +669,8 @@ void CEditorTabWidget::removeWidget(int iIndex, bool bRemoveFromEditorList)
 {
     int iRemoveFromEditorList = -1;
     int i;
-    CEditorWidget *pEditorWidget = NULL;
-    CEditorWidget *pCmpEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
+    CEditorWidget *pCmpEditorWidget = nullptr;
 
     if (bRemoveFromEditorList)
     {
@@ -724,7 +724,7 @@ void CEditorTabWidget::removeWidget(int iIndex, bool bRemoveFromEditorList)
 bool CEditorTabWidget::onClose()
 {
     int i;
-    CEditorWidget *pEditorWidget = NULL;
+    CEditorWidget *pEditorWidget = nullptr;
     bool bQueryDone = false;
     bool bSave = false;
 

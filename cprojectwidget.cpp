@@ -15,7 +15,7 @@
 CProjectWidget::CProjectWidget(CMainWindow *pMainWindow, CProjectListWidget *parent, QString strProjectFolderPath,
                                QString strProjectName, bool bButtonClose, QStringList listRecentClosedFiles, int iTabulatorIndex) :
     QWidget(parent),
-    m_buttonClose(NULL),
+    m_buttonClose(nullptr),
     m_parentProjectListWidget(parent),
     m_pMainWindow(pMainWindow),
     m_listRecentProjectFiles(listRecentClosedFiles),
@@ -44,16 +44,16 @@ CProjectWidget::~CProjectWidget()
     if (m_buttonClose)
     {
         delete m_buttonClose;
-        m_buttonClose = NULL;
+        m_buttonClose = nullptr;
     }
 
     delete m_labelProjectName;
-    m_labelProjectName = NULL;
+    m_labelProjectName = nullptr;
 
     if (m_dialogRunProgram) {
 
         delete m_dialogRunProgram;
-        m_dialogRunProgram = NULL;
+        m_dialogRunProgram = nullptr;
     }
 }
 

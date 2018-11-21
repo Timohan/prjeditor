@@ -10,7 +10,7 @@ class CTextEditHighlightRules: public QObject
 {
     Q_OBJECT
 public:
-    CTextEditHighlightRules(QObject *parent = NULL);
+    CTextEditHighlightRules(QObject *parent = nullptr);
     ~CTextEditHighlightRules();
 
     void addTextEditHighlightRule(CTextEditHighlightRule *pRule);

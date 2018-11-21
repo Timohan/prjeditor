@@ -63,7 +63,7 @@ CDialogFind::CDialogFind(QWidget *parent) :
   //  connect(m_widgetDialogFindInFiles, SIGNAL(enterPressed()), this, SLOT(onSearchClicked()));
   //  connect(m_widgetDialogReplace, SIGNAL(enterPressed()), this, SLOT(onSearchClicked()));
 
-    this->resizeEvent(NULL);
+    this->resizeEvent(nullptr);
 
     int h = m_groupboxSearchDocuments->y()+
             m_groupboxSearchDocuments->height()+
@@ -217,7 +217,7 @@ void CDialogFind::tabBarCurrentChanged(int index)
         m_buttonReplaceAll->setEnabled(true);
     }
 
-    this->resizeEvent(NULL);
+    this->resizeEvent(nullptr);
     int h = m_groupboxSearchDocuments->y()+
             m_groupboxSearchDocuments->height()+
             m_buttonSearch->height()+DEFAULT_MARGIN*2;

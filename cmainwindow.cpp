@@ -21,11 +21,11 @@
 
 CMainWindow::CMainWindow(QWidget *parent) :
     QMainWindow(parent),
-    m_pToolBarWidget(NULL),
-    m_pProjectListWidget(NULL),
-    m_pFolderTreeView(NULL),
-    m_pEditorTabWidget(NULL),
-    m_pTextEditStyleList(NULL)
+    m_pToolBarWidget(nullptr),
+    m_pProjectListWidget(nullptr),
+    m_pFolderTreeView(nullptr),
+    m_pEditorTabWidget(nullptr),
+    m_pTextEditStyleList(nullptr)
 {
     setWindowTitle(STRING_APPLICATION_NAME);
     m_pMenuBar = this->menuBar();
@@ -71,7 +71,7 @@ CMainWindow::CMainWindow(QWidget *parent) :
     QMenu *helpMenu = m_pMenuBar->addMenu(STRING_MENU_HELP);
     QAction *actionAbout = helpMenu->addAction(STRING_MENU_ABOUT.arg(STRING_APPLICATION_NAME));
 
-    m_pSideBar = new CSideBar(this, NULL);
+    m_pSideBar = new CSideBar(this, nullptr);
     m_pEditorTabWidget = new CEditorTabWidget(this);
     m_pFolderTreeView = new CFolderTreeView(this);
     m_pToolBarWidget = new CToolbarWidget(this);
@@ -130,47 +130,47 @@ CMainWindow::~CMainWindow()
     if (m_pToolBarWidget)
     {
         delete m_pToolBarWidget;
-        m_pToolBarWidget = NULL;
+        m_pToolBarWidget = nullptr;
     }
 
     if (m_pProjectListWidget)
     {
         delete m_pProjectListWidget;
-        m_pProjectListWidget = NULL;
+        m_pProjectListWidget = nullptr;
     }
 
     if (m_pFolderTreeView)
     {
         delete m_pFolderTreeView;
-        m_pFolderTreeView = NULL;
+        m_pFolderTreeView = nullptr;
     }
 
     if (m_pEditorTabWidget)
     {
         delete m_pEditorTabWidget;
-        m_pEditorTabWidget = NULL;
+        m_pEditorTabWidget = nullptr;
     }
 
     if (m_pTextEditStyleList)
     {
         delete m_pTextEditStyleList;
-        m_pTextEditStyleList = NULL;
+        m_pTextEditStyleList = nullptr;
     }
 
     if (m_pMenuFile)
     {
         delete m_pMenuFile;
-        m_pMenuFile = NULL;
+        m_pMenuFile = nullptr;
     }
 
     if (m_dialogAbout) {
         delete m_dialogAbout;
-        m_dialogAbout = NULL;
+        m_dialogAbout = nullptr;
     }
 
     if (m_dialogFind) {
         delete m_dialogFind;
-        m_dialogFind = NULL;
+        m_dialogFind = nullptr;
     }
 }
 

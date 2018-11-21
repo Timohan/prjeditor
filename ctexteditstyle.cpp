@@ -16,7 +16,7 @@ CTextEditStyle::~CTextEditStyle()
 
     if (m_pTextEditHighlightRules) {
         delete m_pTextEditHighlightRules;
-        m_pTextEditHighlightRules = NULL;
+        m_pTextEditHighlightRules = nullptr;
     }
 }
 

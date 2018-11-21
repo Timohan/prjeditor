@@ -16,7 +16,7 @@
 CEditorWidget::CEditorWidget(CMainWindow *pMainWindow, CEditorTabWidget *parent, QString strFileName) :
     QWidget(parent),
     m_strFileName(strFileName),
-    m_pTextEdit(NULL),
+    m_pTextEdit(nullptr),
     m_iId(-1),
     m_pMainWindow(pMainWindow)
 {
@@ -49,12 +49,12 @@ CEditorWidget::~CEditorWidget()
     if (m_labelCursorPosition)
     {
         delete m_labelCursorPosition;
-        m_labelCursorPosition = NULL;
+        m_labelCursorPosition = nullptr;
     }
     if (m_pTextEdit)
     {
         delete m_pTextEdit;
-        m_pTextEdit = NULL;
+        m_pTextEdit = nullptr;
     }
 }
 
@@ -137,7 +137,7 @@ void CEditorWidget::setFileName(QString strFileName)
             strFileExtension = strFileName.right( strFileName.size() - iLastIndexExt  );
 
             CTextEditStyle *pStyle = m_pMainWindow->getTextEditStyleList()->getTextEditStyleByFileExtension(strFileExtension);
-            if (pStyle == NULL)
+            if (!pStyle)
             {
                 pStyle = m_pMainWindow->getTextEditStyleList()->getTextEditStyle(0);
             }

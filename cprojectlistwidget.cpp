@@ -25,8 +25,8 @@ CProjectListWidget::~CProjectListWidget()
 
 void CProjectListWidget::loadSettings()
 {
-    QListWidgetItem *pItem = NULL;
-    CProjectWidget *pProject = NULL;
+    QListWidgetItem *pItem = nullptr;
+    CProjectWidget *pProject = nullptr;
 
     QSettings settings(STRING_ORGANIZATION, STRING_APPLICATION_NAME);
 
@@ -56,8 +56,8 @@ void CProjectListWidget::loadSettings()
 void CProjectListWidget::saveSettings()
 {
     int i;
-    QListWidgetItem *pItem = NULL;
-    CProjectWidget *pProject = NULL;
+    QListWidgetItem *pItem = nullptr;
+    CProjectWidget *pProject = nullptr;
     QSettings settings(STRING_ORGANIZATION, STRING_APPLICATION_NAME);
 
     settings.setValue("CProjectListWidget/Count", this->count()-1);
@@ -213,7 +213,7 @@ CProjectWidget *CProjectListWidget::getSelectedItem()
         CProjectWidget *pProjectWidget = (CProjectWidget *)this->itemWidget(pItemWidget);
         return pProjectWidget;
     }
-    return NULL;
+    return nullptr;
 }
 
 /**

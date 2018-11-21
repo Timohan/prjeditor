@@ -64,6 +64,7 @@
             <word>namespace</word>
             <word>new</word>
             <word>NULL</word>
+            <word>nullptr</word>
             <word>operator</word>
             <word>private</word>
             <word>protected</word>

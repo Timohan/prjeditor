@@ -9,7 +9,7 @@
 
 CSyntaxHighlighter::CSyntaxHighlighter(QTextDocument *parent, CTextEdit *pTextEdit, CMainWindow *pMainWindow) :
     QSyntaxHighlighter(parent),
-    m_pStyle(NULL),
+    m_pStyle(nullptr),
     m_pMainWindow(pMainWindow),
     m_pTextEdit(pTextEdit),
     m_iHighlightingRuleEnabled(-1),
@@ -233,7 +233,7 @@ void CSyntaxHighlighter::highlightBlock(const QString &text)
 
     setCurrentBlockState(-1);
 
-    if (m_pStyle == NULL)
+    if (m_pStyle == nullptr)
     {
         if (m_eHighlightOnCursorMode == SYNTAXHIGHLIGHTER_ON_CURSOR_MODE_SEARCH_ADD)
         {

@@ -15,7 +15,7 @@ CTextEditHighlightRules::~CTextEditHighlightRules()
     for (i=0;i<m_pTextEditHighlightRule.size();i++)
     {
         delete m_pTextEditHighlightRule[i];
-        m_pTextEditHighlightRule[i] = NULL;
+        m_pTextEditHighlightRule[i] = nullptr;
     }
 
     m_pTextEditHighlightRule.clear();

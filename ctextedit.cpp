@@ -13,10 +13,10 @@
 CTextEdit::CTextEdit(QWidget *parent, CMainWindow *pMainWindow, QLabel *labelCursorPosition) :
     QTextEdit(parent),
     m_pMainWindow(pMainWindow),
-    m_pStyle(NULL),
+    m_pStyle(nullptr),
     m_labelCursorPosition(labelCursorPosition),
-    m_pTextDocument(NULL),
-    m_pSyntaxHighlighter(NULL)
+    m_pTextDocument(nullptr),
+    m_pSyntaxHighlighter(nullptr)
 {
     setStyleSheet("font: 9pt \"Monospace\";");
     setLineWrapMode(QTextEdit::NoWrap);
@@ -54,7 +54,7 @@ void CTextEdit::setLastSavedText(QString text)
 
 void CTextEdit::setTextEditStyle(CTextEditStyle *style)
 {
-    if (m_pStyle == NULL || style == NULL ||
+    if (!m_pStyle || !style ||
        m_pStyle->getStyleName() != style->getStyleName())
     {
         m_pStyle = style;

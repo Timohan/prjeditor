@@ -14,10 +14,10 @@
 
 CFolderTreeView::CFolderTreeView(CMainWindow *parent) :
     QTreeView (parent),
-    m_modelFileSystem(NULL),
-    m_pProjectListWidget(NULL),
-    m_dialogCreate(NULL),
-    m_pFolderWatcher(NULL),
+    m_modelFileSystem(nullptr),
+    m_pProjectListWidget(nullptr),
+    m_dialogCreate(nullptr),
+    m_pFolderWatcher(nullptr),
     m_pMainWindow(parent)
 {
     int i;
