@@ -29,7 +29,7 @@ void CSideBar::moveSideBar(QMouseEvent *e)
 
     m_iPositionX = pointParentPressed.x() - m_pointParentPressed.x() + m_iPressedPositionX;
 
-    if (!m_pSideBar) {
+    if (m_pSideBar) {
 
         m_pSideBar->refreshPosition();
     }
